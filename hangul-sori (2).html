@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>한글 소리 탐험: 입 안에서 무슨 일이?</title>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f8;--card:#fff;--ink:#1f2a44;--sub:#5a6682;--ac:#4f46d8;--acs:#e6e4ff;--tg:#ff8fa3;--air:#1f8bff;--prs:#ff4d5a;--nas:#dcecff;--cav:#fff;--ln:#d5dcea;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141a2b;--card:#1d2540;--ink:#eef1fa;--sub:#a5b0cd;--ac:#9a94ff;--acs:#2e2f66;--tg:#ff8fa3;--air:#5db1ff;--nas:#23365a;--cav:#252e4c;--ln:#38436a}}
+:root[data-theme="dark"]{--bg:#141a2b;--card:#1d2540;--ink:#eef1fa;--sub:#a5b0cd;--ac:#9a94ff;--acs:#2e2f66;--tg:#ff8fa3;--air:#5db1ff;--nas:#23365a;--cav:#252e4c;--ln:#38436a}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Noto Sans KR",system-ui,sans-serif}
+main{max-width:980px;margin:0 auto;padding:18px 14px 40px}
+h1{font:400 clamp(26px,5vw,38px)/1.2 Jua,"Noto Sans KR",sans-serif;margin:6px 0 4px}
+.lead{color:var(--sub);margin:0 0 16px}
+.wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px}
+@media(max-width:760px){.wrap{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:12px}
+svg{width:100%;height:auto;display:block}
+.tabs{display:flex;gap:6px;margin-bottom:10px}
+.tabs button{flex:1;font:inherit;font-weight:700;padding:9px;border-radius:10px;border:1px solid var(--ln);background:var(--card);color:var(--ink);cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--ac);color:#fff;border-color:var(--ac)}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.grid button{font:400 26px/1 Jua,"Noto Sans KR",sans-serif;padding:11px 0;border-radius:10px;border:1px solid var(--ln);background:var(--card);color:var(--ink);cursor:pointer}
+.grid button[aria-pressed=true]{background:var(--acs);border-color:var(--ac);color:var(--ac)}
+button:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.info{margin-top:10px}
+.big{font:400 54px/1 Jua,sans-serif;color:var(--ac);float:left;margin:0 14px 4px 0}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;background:var(--acs);color:var(--ac);font-weight:700;font-size:14px;margin:0 6px 6px 0}
+.tip{clear:both;margin:8px 0 0;padding:9px 12px;border-radius:10px;background:var(--nas)}
+.row{display:flex;gap:12px;align-items:center;margin-top:10px;flex-wrap:wrap}
+.row button{font:inherit;font-weight:700;padding:8px 16px;border-radius:10px;border:0;background:var(--ac);color:#fff;cursor:pointer}
+.row label{color:var(--sub);font-size:14px}
+.leg{font-size:13px;color:var(--sub);margin:8px 2px 0}
+.v{animation:vb .18s infinite alternate}@keyframes vb{to{opacity:.25;transform:scaleX(1.5)}}
+@media(prefers-reduced-motion:reduce){.v{animation:none}}
+</style></head><body><main>
+<h1>한글 소리 탐험</h1>
+<p class="lead">글자를 눌러 입 안의 모습을 보고, 나도 같이 소리 내 봐요.</p>
+<div class="wrap">
+<div class="card">
+<svg id="sv" viewBox="10 85 280 245" role="img" aria-label="입 안 단면 그림">
+<path d="M60,138Q130,88 276,100L276,160L216,140Q165,115 112,160Q100,148 82,165L60,150Z" fill="var(--nas)"/>
+<text x="150" y="108" font-size="9" fill="var(--sub)" text-anchor="middle">코안</text>
+<path d="M82,170L82,165Q100,150 112,160Q165,115 216,140L276,160L276,300L82,300Z" fill="var(--cav)"/>
+<path id="tg" fill="var(--tg)" stroke="#e5627b" stroke-width="1.5"/>
+<line id="vl" x1="216" y1="140" stroke="#e9a0a8" stroke-width="7" stroke-linecap="round"/>
+<path d="M82,165Q100,150 112,160Q165,115 216,140" fill="none" stroke="var(--ink)" stroke-width="3"/>
+<line x1="276" y1="100" x2="276" y2="300" stroke="var(--ink)" stroke-width="3"/>
+<line x1="82" y1="300" x2="276" y2="300" stroke="var(--ink)" stroke-width="3"/>
+<rect x="82" y="166" width="9" height="20" rx="3" fill="#fff" stroke="#8a93ab"/>
+<rect id="lt" x="82" width="9" height="18" rx="3" fill="#fff" stroke="#8a93ab"/>
+<ellipse id="ul" cy="165" rx="13" ry="9" fill="#e87a8a"/>
+<ellipse id="ll" rx="13" ry="9" fill="#e87a8a"/>
+<g id="vib" opacity="0"><path class="v" d="M250,292q-6,4 0,8M256,290q-9,6 0,12M268,292q6,4 0,8M274,290q9,6 0,12" fill="none" stroke="var(--prs)" stroke-width="2" style="transform-box:fill-box;transform-origin:center"/></g>
+<ellipse cx="262" cy="296" rx="7" ry="3" fill="none" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="210" y="318" font-size="9" fill="var(--sub)">목청(성대)</text>
+<circle id="pr" r="10" fill="var(--prs)" opacity="0"/>
+<circle id="cp" r="7" fill="none" stroke="#ffb400" stroke-width="3" opacity="0"/>
+<text id="pl" font-size="10" font-weight="700" fill="var(--ink)" text-anchor="middle" stroke="var(--cav)" stroke-width="3" paint-order="stroke"/>
+<g id="pg" fill="var(--air)"></g>
+</svg>
+<p class="leg">분홍색 = 혀 · 파란 점 = 공기의 흐름 · 빨간 원 = 막힌 공기 · 노란 고리 = 소리 나는 위치</p>
+</div>
+<div>
+<div class="tabs" role="tablist"><button role="tab" aria-selected="true" id="t1">자음</button><button role="tab" aria-selected="false" id="t2">단모음</button></div>
+<div class="grid" id="gr"></div>
+<div class="card info" aria-live="polite"><div class="big" id="ch">ㄱ</div><div id="tags"></div><p id="ds" style="margin:0"></p><p class="tip" id="tp"></p>
+<div class="row"><button id="rp">▶ 다시 보기</button><label><input type="checkbox" id="sl"> 천천히 보기</label></div></div>
+<div class="card info"><b>🎤 내 목소리로 해 보기</b>
+<div class="row"><button id="m1">모음 소리 내기</button><button id="m2">음절 말하기</button><button id="m0" hidden>멈추기</button></div>
+<p class="leg" id="ms">‘모음 소리 내기’: 길게 소리 내면 혀 그림이 내 소리를 따라 움직여요. ‘음절 말하기’: ‘가’, ‘나’처럼 한 글자를 말하면 그 소리를 보여 줘요.</p></div>
+</div></div>
+</main>
+<script>
+const $=s=>document.querySelector(s),NS="http://www.w3.org/2000/svg";
+const N={tx:100,ty:228,hx:165,hy:222,vel:0,gap:12,rd:0};let C={...N},T={...N};
+// 글자, 위치, 방법, 울림, 종류, 혀끝xy, 혀등xy, 위치표시xy, 비음?, 입술닫힘?, 거센?, 설명, 따라 하기
+const K=[
+["ㄱ","여린입천장소리","파열음",0,"stop",104,232,232,150,232,148,0,0,0,"혀의 뒤쪽이 여린입천장(입천장 안쪽의 말랑한 곳)을 막았다가 터뜨리며 소리 내요.","손바닥을 입 앞에 대고 ‘가’ 해 보세요. 바람이 톡 느껴져요."],
+["ㅋ","여린입천장소리","파열음",0,"stop",104,232,232,150,232,148,0,0,1,"ㄱ과 같은 자리에서 막았다가, 숨을 훨씬 세게 터뜨려요. (거센소리)","얇은 종이를 입 앞에 대고 ‘가’와 ‘카’를 비교해 보세요."],
+["ㄴ","잇몸소리","비음",1,"nasal",104,166,165,210,108,162,1,0,0,"혀끝이 윗잇몸에 닿고, 공기는 막힌 입 대신 코로 나가요.","코를 살짝 쥐고 ‘나’ 해 보세요. 소리가 답답해져요."],
+["ㄷ","잇몸소리","파열음",0,"stop",104,166,165,210,108,162,0,0,0,"혀끝으로 윗잇몸을 막았다가 터뜨리며 소리 내요.","목에 손을 대고 ‘다’ 해 보세요. 첫소리 ㄷ은 떨림이 약해요."],
+["ㅌ","잇몸소리","파열음",0,"stop",104,166,165,210,108,162,0,0,1,"ㄷ과 같지만 숨을 세게 터뜨려요. (거센소리)","종이를 입 앞에 대고 ‘다’와 ‘타’를 비교해 보세요."],
+["ㄹ","잇몸소리","유음",1,"liq",104,166,180,200,108,162,0,0,0,"혀끝이 윗잇몸을 가볍게 건드리고, 공기는 혀의 양옆으로 흘러요.","‘라라라’ 하며 혀끝이 잇몸에 닿는 느낌을 찾아보세요."],
+["ㅅ","잇몸소리","마찰음",0,"fric",106,172,165,205,104,168,0,0,0,"혀끝이 잇몸 가까이에서 좁은 틈을 만들고, 그 사이로 공기를 마찰시켜요.","‘스—’ 길게 소리 내며 새어 나오는 바람을 느껴 보세요."],
+["ㅈ","센입천장소리","파찰음",0,"aff",106,215,158,136,158,134,0,0,0,"혓바닥이 센입천장(딱딱한 곳)에 닿아 막았다가, 마찰을 일으키며 떼어요.","‘자’ 할 때 혓바닥이 입천장에 닿는 곳을 느껴 보세요."],
+["ㅊ","센입천장소리","파찰음",0,"aff",106,215,158,136,158,134,0,0,1,"ㅈ과 같은 자리에서 숨을 세게 내보내요. (거센소리)","종이를 입 앞에 대고 ‘자’와 ‘차’를 비교해 보세요."],
+["ㅁ","입술소리","비음",1,"nasal",100,228,165,222,72,178,1,1,0,"두 입술을 붙이고, 공기는 코로 나가요.","입을 다문 채 ‘음—’ 하며 코와 입술의 떨림을 느껴 보세요."],
+["ㅂ","입술소리","파열음",0,"stop",100,228,165,222,72,178,0,1,0,"두 입술을 붙였다가 터뜨리며 소리 내요.","손바닥을 입 앞에 대고 ‘바’ 해 보세요."],
+["ㅍ","입술소리","파열음",0,"stop",100,228,165,222,72,178,0,1,1,"ㅂ과 같지만 숨을 세게 터뜨려요. (거센소리)","종이를 입 앞에 대고 ‘바’와 ‘파’를 비교해 보세요."],
+["ㅇ","여린입천장소리","비음",1,"nasal",104,232,236,172,236,170,1,0,0,"받침 ㅇ[ŋ]: 혀 뒤쪽이 입천장 안쪽에 닿고, 공기는 코로 나가요. (첫소리 ㅇ은 소리가 없어요.)","‘강’을 길게 말하며 끝소리에서 코가 울리는 걸 느껴 보세요."],
+["ㅎ","목청소리","마찰음",0,"fric",100,228,165,222,262,290,0,0,0,"혀나 입술이 아닌 목청 사이의 좁은 틈에서 공기가 마찰하며 나와요.","‘하—’ 하고 입김을 불어 보세요. 거울이 뿌옇게 돼요."]];
+const V=[["ㅣ","전설","고",0,140,152],["ㅔ","전설","중",0,145,182],["ㅐ","전설","저",0,150,215],["ㅟ","전설","고",1,140,152],["ㅚ","전설","중",1,145,182],["ㅡ","후설","고",0,215,158],["ㅓ","후설","중",0,215,190],["ㅏ","후설","저",0,215,225],["ㅜ","후설","고",1,226,160],["ㅗ","후설","중",1,226,192]];
+let P=[],tm=[],flow=null,fc=0,S=1,cur=null;
+const G=$("#gr");
+function build(m){G.innerHTML="";(m?V:K).forEach((d,i)=>{const b=document.createElement("button");b.textContent=d[0];b.setAttribute("aria-pressed","false");b.onclick=()=>{[...G.children].forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");play(m,d)};G.appendChild(b)});
+$("#t1").setAttribute("aria-selected",!m);$("#t2").setAttribute("aria-selected",!!m);G.children[0].click()}
+$("#t1").onclick=()=>build(0);$("#t2").onclick=()=>build(1);
+$("#sl").onchange=e=>S=e.target.checked?2:1;$("#rp").onclick=()=>cur&&play(...cur);
+const after=(ms,f)=>tm.push(setTimeout(f,ms*S));
+const OUT=c=>[c,[96,177],[36,178]],NAS=[[266,230],[268,170],[262,118],[200,108],[120,112],[62,128]];
+function tags(a){$("#tags").innerHTML=a.map(t=>`<span class="tag">${t}</span>`).join("")}
+function play(m,d){if(mode)stopMic();cur=[m,d];tm.forEach(clearTimeout);tm=[];flow=null;$("#cp").style.opacity=0;$("#pr").style.opacity=0;$("#pl").textContent="";$("#vib").style.opacity=0;$("#ch").textContent=d[0];
+if(m){const[ ,f,h,r,hx,hy]=d;tags([f+"모음","혀 높이: "+h,r?"원순(둥근 입술)":"평순(펴진 입술)","울림소리"]);
+$("#ds").textContent=`혀의 가장 높은 곳이 입안의 ${f=="전설"?"앞쪽":"뒤쪽"}, ${h=="고"?"높은":h=="중"?"중간":"낮은"} 자리에 있고 입술은 ${r?"앞으로 내밀어 둥글게":"펴서"} 모아요.`;
+$("#tp").textContent="거울로 입술 모양을 보며 ‘"+d[0]+"’를 길게 내 보세요. 혀의 높이와 턱의 벌어짐이 달라져요.";
+setT({tx:100,ty:215+(hy-150)*.3,hx,hy,vel:0,gap:h=="고"?6:h=="중"?18:34,rd:r});
+after(500,()=>{flow=[[262,296],[264,200],[hx,hy-9],[96,177],[36,178]];$("#vib").style.opacity=1});after(2600,()=>{flow=null;$("#vib").style.opacity=0});return}
+const[ch,pl,mn,vc,kd,tx,ty,hx,hy,cx,cy,nv,lp,as,ds,tp]=d;
+tags([pl,mn,vc?"울림소리":"안울림소리"+(as?" · 거센소리":"")]);$("#ds").textContent=ds;$("#tp").textContent=tp;
+setT({tx,ty,hx,hy,vel:nv,gap:lp?0:12,rd:0});
+const c=[cx,cy],oc=$("#cp");
+after(700,()=>{oc.setAttribute("cx",cx);oc.setAttribute("cy",cy);oc.style.opacity=1;const t=$("#pl");t.textContent=pl;t.setAttribute("x",Math.min(Math.max(cx,70),215));t.setAttribute("y",cy>280?284:cy-12);
+if(vc)$("#vib").style.opacity=1;
+if(kd=="stop"||kd=="aff"){const p=$("#pr");p.setAttribute("cx",cx+16);p.setAttribute("cy",lp?190:cy+14);p.style.opacity=.55}
+else flow=kd=="nasal"?NAS:kd=="liq"?[[170,196],[110,180],[96,177],[36,178]]:kd=="fric"&&cx>250?[[262,296],[264,200],[200,170],[96,177],[36,178]]:OUT(c)});
+const rel=()=>{$("#pr").style.opacity=0;burst(c,as?26:14);setT(N);$("#vib").style.opacity=0};
+if(kd=="stop")after(1500,rel);
+if(kd=="aff"){after(1500,()=>{$("#pr").style.opacity=0;burst(c,as?18:8);flow=OUT(c);setT({ty:ty+10,hy:hy+22})});after(2300,()=>{flow=null;setT(N);$("#vib").style.opacity=0})}
+if(kd=="liq"){after(1500,()=>setT({ty:228,hy:222}));after(2300,()=>{flow=null;setT(N);$("#vib").style.opacity=0})}
+if(kd=="fric"||kd=="nasal")after(2300,()=>{flow=null;setT(N);$("#vib").style.opacity=0});
+after(2600,()=>{oc.style.opacity=0;$("#pl").textContent=""})}
+function setT(o){Object.assign(T,o)}
+function spawn(r,j,sp){const e=document.createElementNS(NS,"circle");e.setAttribute("r",2.6);$("#pg").appendChild(e);const L=[];let tot=0;for(let i=1;i<r.length;i++){const l=Math.hypot(r[i][0]-r[i-1][0],r[i][1]-r[i-1][1]);L.push(l);tot+=l}P.push({e,r,L,tot,s:0,sp,j:(Math.random()-.5)*j})}
+function burst(c,n){for(let i=0;i<n;i++)spawn(OUT(c),12,2.2+Math.random()*2.5)}
+function at(p){let s=p.s;for(let i=0;i<p.L.length;i++){if(s<=p.L[i]){const t=s/p.L[i];return[p.r[i][0]+(p.r[i+1][0]-p.r[i][0])*t,p.r[i][1]+(p.r[i+1][1]-p.r[i][1])*t+p.j]}s-=p.L[i]}return null}
+function draw(){const{tx,ty,hx,hy,vel,gap,rd}=C;
+$("#tg").setAttribute("d",`M${tx},${ty}C${tx+30},${ty} ${hx-50},${hy} ${hx},${hy}C${hx+22},${hy} 252,${hy+14} 252,${hy+50}L252,300L108,300L108,${ty+30}Q${tx-6},${ty+20} ${tx},${ty}Z`);
+const v=$("#vl");v.setAttribute("x2",274-16*vel);v.setAttribute("y2",160+52*vel);
+const lx=70-8*rd,rx=13-3*rd;for(const[id,y]of[["ul",165],["ll",183+gap]]){const e=$("#"+id);e.setAttribute("cx",lx);e.setAttribute("cy",y);e.setAttribute("rx",rx)}
+$("#lt").setAttribute("y",188+gap)}
+function loop(){const f=.16/S;for(const k in C)C[k]+=(T[k]-C[k])*f;draw();
+if(flow&&++fc%(S>1?9:5)==0)spawn(flow,5,flow==NAS?1.6/S*S:1.8);
+P=P.filter(p=>{p.s+=p.sp/S;const q=at(p);if(!q){p.e.remove();return false}p.e.setAttribute("cx",q[0]);p.e.setAttribute("cy",q[1]);return true});
+requestAnimationFrame(loop)}
+let ac,st,an,r2,rec,mode=0;
+const ms=t=>$("#ms").textContent=t;
+function stopMic(){mode=0;cancelAnimationFrame(r2);try{rec&&rec.abort()}catch(e){}rec=null;st&&st.getTracks().forEach(t=>t.stop());st=null;ac&&ac.close();ac=null;$("#m0").hidden=true;flow=null;$("#vib").style.opacity=0}
+$("#m0").onclick=()=>{stopMic();ms("멈췄어요.")};
+$("#m1").onclick=async()=>{stopMic();tm.forEach(clearTimeout);
+try{st=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}})}catch(e){return ms("마이크를 켤 수 없어요. ‘허용’을 눌렀는지 확인하고, 그래도 안 되면 링크를 크롬·사파리 앱에서 직접 열어 보세요.")}
+ac=new(window.AudioContext||window.webkitAudioContext)();an=ac.createAnalyser();an.fftSize=4096;ac.createMediaStreamSource(st).connect(an);mode=1;$("#m0").hidden=false;
+ms("‘아—’, ‘이—’, ‘우—’ 하고 길게 소리 내 보세요.");
+const b=new Float32Array(an.frequencyBinCount),hz=ac.sampleRate/an.fftSize,n=Math.floor(3200/hz),pre=new Float32Array(n+1),h=Math.round(90/hz);let hx=165,hy=222;
+const tick=()=>{if(mode!=1)return;an.getFloatFrequencyData(b);let mx=-200;for(let i=Math.floor(100/hz);i<n;i++)mx=Math.max(mx,b[i]);
+if(mx<-65){flow=null;$("#vib").style.opacity=0}else{
+for(let i=0;i<n;i++)pre[i+1]=pre[i]+Math.pow(10,b[i]/20);
+const sv=i=>{const a=Math.max(0,i-h),c=Math.min(n,i+h+1);return(pre[c]-pre[a])/(c-a)};
+let f1=0,v1=0;for(let i=Math.floor(250/hz);i<950/hz;i++){const v=sv(i);if(v>v1){v1=v;f1=i*hz}}
+let f2=0,v2=0;for(let i=Math.floor((f1+300)/hz);i<2900/hz;i++){const v=sv(i);if(v>v2&&v>=sv(i-1)&&v>=sv(i+1)){v2=v;f2=i*hz}}
+f2=f2||f1+300;
+const ty=152+(f1-300)/550*73,tx=140+(2300-f2)/1450*86;
+hy+=(Math.min(228,Math.max(150,ty))-hy)*.35;hx+=(Math.min(228,Math.max(138,tx))-hx)*.35;
+const rd=f2<1100&&f1<550?1:0,gap=6+(hy-152)/73*28;
+setT({tx:100,ty:215+(hy-150)*.3,hx,hy,vel:0,gap,rd});
+flow=[[262,296],[264,200],[hx,hy-9],[96,177],[36,178]];$("#vib").style.opacity=1;
+let bs=V[0],bd=1e9;for(const v of V){const d=(hx-v[4])**2+(hy-v[5])**2+(rd!=v[3]?900:0);if(d<bd){bd=d;bs=v}}
+$("#ch").textContent=bs[0];ms(`가장 가까운 모음: ${bs[0]} (${bs[1]}모음 · 혀 높이 ${bs[2]} · ${bs[3]?"원순":"평순"})`)}
+r2=requestAnimationFrame(tick)};tick()};
+const IN="ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ",VW="ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ",TN={ㄲ:"ㄱ",ㄸ:"ㄷ",ㅃ:"ㅂ",ㅆ:"ㅅ",ㅉ:"ㅈ"};
+function showSyl(t){const c=[...t].find(x=>{const k=x.charCodeAt(0)-44032;return k>=0&&k<11172});if(!c)return ms(`“${t}” — 한글 글자를 찾지 못했어요. 다시 말해 보세요.`);
+const k=c.charCodeAt(0)-44032,ini=IN[Math.floor(k/588)],vw=VW[Math.floor(k%588/28)],ci=ini=="ㅇ"?null:K.find(d=>d[0]==(TN[ini]||ini)),vi=V.find(d=>d[0]==vw);
+ms(`인식된 말: “${t}” → 첫 글자 ‘${c}’ = 첫소리 ${ini} + 모음 ${vw}. 인식이 틀릴 수 있어요.`+(ini in TN?" 된소리는 예사소리로 보여 줘요.":"")+(vi?"":" 이중 모음은 아직 보여 주지 못해요."));
+if(ci){play(0,ci);if(vi)after(2800,()=>play(1,vi))}else if(vi)play(1,vi)}
+$("#m2").onclick=()=>{stopMic();const R=window.SpeechRecognition||window.webkitSpeechRecognition;if(!R)return ms("이 브라우저는 음절 인식을 지원하지 않아요. 안드로이드는 크롬, 아이폰은 사파리에서 열어 보세요.");
+rec=new R();rec.lang="ko-KR";rec.interimResults=false;mode=2;$("#m0").hidden=false;ms("듣고 있어요… ‘가’, ‘나’, ‘파’처럼 한 글자씩 또렷이 말해 보세요.");
+rec.onresult=e=>{mode=0;showSyl(e.results[0][0].transcript)};
+rec.onerror=e=>ms(e.error=="not-allowed"?"마이크가 허용되지 않았어요. 링크를 브라우저에서 직접 열어 보세요.":"잘 듣지 못했어요. 다시 눌러 보세요.");
+rec.onend=()=>{mode=0;$("#m0").hidden=true};rec.start()};
+draw();loop();build(0);
+</script></body></html>
